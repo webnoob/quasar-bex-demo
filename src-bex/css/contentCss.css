@@ -1,0 +1,13 @@
+/* Global CSS used within your BEX. This is not preprocessed so this has to be pure CSS. */
+.bex-add-todo__container {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/**
+Add some padding to the top of the google results so we can add our button
+*/
+.rc {
+  padding-top: 25px;
+}
