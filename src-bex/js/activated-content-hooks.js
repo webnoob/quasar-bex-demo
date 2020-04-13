@@ -19,8 +19,11 @@ const resetIFrameHeight = () => {
   setIFrameHeight(defaultFrameHeight)
 }
 
+console.log('UNactivated hook')
+
 let Bridge = null
 export default function attachActivatedContentHooks (window, chrome, bridge) {
+  console.log('activated hook')
   /**
    * When the drawer is toggled set the iFrame height to take the whole page.
    * Reset when the drawer is closed.
@@ -33,6 +36,10 @@ export default function attachActivatedContentHooks (window, chrome, bridge) {
       resetIFrameHeight()
     }
     bridge.send(event.eventResponseKey)
+  })
+
+  bridge.on('test.event', event => {
+    console.log(event)
   })
 
   Bridge = bridge

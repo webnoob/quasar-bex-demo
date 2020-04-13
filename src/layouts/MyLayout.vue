@@ -55,7 +55,7 @@ export default {
 
   data () {
     return {
-      uiVisible: false,
+      uiVisible: true,
       todo: {
         id: null,
         text: '',
